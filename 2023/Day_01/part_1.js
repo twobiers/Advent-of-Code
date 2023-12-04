@@ -8,7 +8,6 @@ const INPUT = String(fs.readFileSync(path.join(__dirname, "input.txt"))).trim().
 
 const pStart = performance.now();
 
-const result = INPUT.map(e => Number(e.replace(/\D/g, "")[0] + e.replace(/\D/g, "").slice(-1))).reduce((a, b) => a + b);
 
 const pEnd = performance.now();
 
