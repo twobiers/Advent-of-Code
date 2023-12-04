@@ -23,7 +23,6 @@ const matchingGroup = `[0-9]|(?:${numberWords.join('|')})`;
 const matcher = new RegExp(`(${matchingGroup})(?:.*(${matchingGroup}))?`);
 
 const matches = INPUT.map(l => l.match(matcher));
-console.log(matches)
 
 const candidates = matches.map(m => {
     const firstDigit = Number(m[1]) || numberWords.indexOf(m[1]) + 1;
